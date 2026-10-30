@@ -1,30 +1,48 @@
-const data = [
-  {
-    id: '1',
-    firstName: 'Cyril',
-    age: 35
-  },
-  {
-    id: '2',
-    firstName: 'Camille',
-    age: 26
-  }
-];
+import UserModel from '../models/user.mjs';
 
 const Users = class Users {
- constructor(app) {
+ constructor(app, connect) {
   this.app = app;
+  this.UserModel = connect.model('User', UserModel);
 
   this.run();
  }
 
- getShowByid() {
-  this.app.get('/users/:id', (req, res) => {
+ create() {
+  this.app.post('/user/', (req, res) => {
+    try {
+      const userModel = new this.UserModel(req.body);
+
+      userModel.save().then((user) => {
+        res.status(200).json(user || {});
+      }).catch((err) => {
+        res.status(400).json({
+          code: 400,
+          message: err
+        });
+      });
+    } catch {
+      res.status(500).json({
+        code: 500,
+        message: 'Internal Server Error'
+      });
+    }
+  });
+ }
+
+ showByid() {
+  this.app.get('/user/:id', (req, res) => {
     try {
       const id = req.params.id;
-      const user = data.filter((user) => user.id === id);
 
-      res.status(200).json(user[0] || {});
+      this.UserModel.findById(id).then((user) => {
+        res.status(200).json(user || {});
+      }).catch(() => {
+        res.status(404).json({
+          code: 404,
+          message: 'Not Found'
+        });
+      });
     } catch {
       res.status(500).json({
         code: 500,
@@ -35,23 +53,47 @@ const Users = class Users {
  }
 
  getAll() {
-  try {
-    this.app.get('/users/', (req, res) => {
-      res.status(200).json(data);
-    });
-  } catch (error) {
-    res.status(500).json({
-      code: 500,
-      message: 'Internal Server Error',
-      error
-    });
-  }
+  this.app.get('/users/', (req, res) => {
+    try {
+      this.UserModel.find().then((users) => {
+        res.status(200).json(users || []);
+      }).catch(() => {
+        res.status(404).json({
+          code: 404,
+          message: 'Not Found'
+        });
+      });
+    } catch {
+      res.status(500).json({
+        code: 500,
+        message: 'Internal Server Error'
+      });
+    }
+  });
  }
 
  run() {
+  this.create();
   this.getAll();
-  this.getShowByid();
+  this.showByid();
  }
 };
 
 export default Users;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
