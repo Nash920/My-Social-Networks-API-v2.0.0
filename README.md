@@ -1,6 +1,6 @@
 # My Social Networks API
 
-API REST réalisée avec Node.js pour le TP **My Social Networks API** du M1 Data Engineering & IA.
+API REST réalisée avec Node.js pour le TP **My Social Networks API** du M1 Data Engineering & IA. Bastien Coutte
 
 ## Objectif
 
