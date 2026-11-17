@@ -1,9 +1,0 @@
-$kind: http-request
-url: "{{baseUrl}}/api/v1/messages"
-method: POST
-headers:
-  Content-Type: application/json
-body:
-  type: text
-  content: '{"discussionId":"DISCUSSION_ID","authorId":"USER_ID","content":"Bonjour à tous"}'
-order: 6000

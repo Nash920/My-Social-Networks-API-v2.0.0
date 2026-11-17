@@ -1,3 +1,0 @@
-$kind: collection
-description: CRUDS utilisateurs. L'email est obligatoire et unique.
-order: 2000

@@ -1,9 +1,0 @@
-$kind: http-request
-url: "{{baseUrl}}/api/v1/shoppingItems"
-method: POST
-headers:
-  Content-Type: application/json
-body:
-  type: text
-  content: '{"eventId":"EVENT_ID","name":"Boissons","quantity":4,"arrivalTime":"2027-09-10T17:30:00.000Z"}'
-order: 3000

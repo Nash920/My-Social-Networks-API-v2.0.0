@@ -1,9 +1,0 @@
-$kind: http-request
-url: "{{baseUrl}}/api/v1/users/{{resourceId}}"
-method: PATCH
-headers:
-  Content-Type: application/json
-body:
-  type: text
-  content: '{"city":"Paris"}'
-order: 4000

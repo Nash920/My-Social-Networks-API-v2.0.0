@@ -1,3 +1,0 @@
-$kind: collection
-description: Un sondage contient une ou plusieurs questions ; chaque question comporte plusieurs réponses possibles.
-order: 6000

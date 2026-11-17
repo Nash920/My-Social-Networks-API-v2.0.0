@@ -1,4 +1,0 @@
-$kind: http-request
-url: "{{baseUrl}}/api/v1/users?page=1&limit=20"
-method: GET
-order: 1000

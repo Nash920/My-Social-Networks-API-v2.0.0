@@ -1,9 +1,0 @@
-$kind: http-request
-url: "{{baseUrl}}/api/v1/events/{{resourceId}}"
-method: PATCH
-headers:
-  Content-Type: application/json
-body:
-  type: text
-  content: '{"location":"Lyon"}'
-order: 4000
