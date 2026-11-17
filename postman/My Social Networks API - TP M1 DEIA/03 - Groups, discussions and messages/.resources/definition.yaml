@@ -1,0 +1,3 @@
+$kind: collection
+description: Groupes avec membres et administrateurs ; discussions rattachées à un groupe ou un événement, jamais aux deux ; messages commentant un fil.
+order: 4000

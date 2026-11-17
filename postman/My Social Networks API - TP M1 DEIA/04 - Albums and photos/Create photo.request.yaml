@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/photos"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: '{"albumId":"ALBUM_ID","url":"https://example.com/photo.jpg","authorId":"USER_ID"}'
+order: 4000

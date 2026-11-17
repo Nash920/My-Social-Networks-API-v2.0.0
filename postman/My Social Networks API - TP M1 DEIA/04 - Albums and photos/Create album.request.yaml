@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/albums"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: '{"eventId":"EVENT_ID","name":"Souvenirs"}'
+order: 3000

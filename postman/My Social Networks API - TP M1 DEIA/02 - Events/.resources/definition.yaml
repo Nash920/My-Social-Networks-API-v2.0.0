@@ -1,0 +1,3 @@
+$kind: collection
+description: CRUDS événements. Un événement possède un ou plusieurs organisateurs, des membres et les options ticketing, shopping list et covoiturage.
+order: 3000

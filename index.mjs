@@ -1,5 +1,4 @@
-import Server from './src/server.mjs';
+import { createApp } from './src/server.mjs';
 
-const server = new Server();
-
-server.run();
+const port = Number(process.env.PORT) || 3000;
+createApp().listen(port, () => console.log(`My Social Networks API listening on http://localhost:${port}`));

@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/tickets"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: '{"ticketTypeId":"TICKET_TYPE_ID","firstName":"Alex","lastName":"Martin","email":"alex@example.com","address":"1 rue de Paris"}'
+order: 4000

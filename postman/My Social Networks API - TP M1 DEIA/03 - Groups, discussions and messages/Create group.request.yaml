@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/groups"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: '{"name":"Data Engineering","description":"Groupe M1","type":"public","members":["USER_ID"],"administrators":["USER_ID"],"allowMemberPosts":true,"allowMemberEvents":true}'
+order: 4000

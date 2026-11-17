@@ -1,0 +1,3 @@
+$kind: collection
+description: Health check, informations de version et liste des ressources.
+order: 1000

@@ -1,0 +1,12 @@
+workspace:
+  id: eb859a19-955a-4800-8b0b-a06972a85fcc
+
+localResources:
+  collections:
+    - ../My-Social-Networks-API.postman_collection.json
+    - ../My Social Networks API - TP M1 DEIA
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections: {}

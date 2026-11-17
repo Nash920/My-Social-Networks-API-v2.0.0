@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/polls"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: '{"eventId":"EVENT_ID","createdBy":"ORGANIZER_ID","title":"Horaire préféré","questions":[{"label":"Quel horaire ?","options":["18h","19h","20h"]}]}'
+order: 2000

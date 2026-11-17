@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/ticketTypes"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: '{"eventId":"PUBLIC_EVENT_ID","name":"Early bird","amount":15,"quantity":100}'
+order: 3000
